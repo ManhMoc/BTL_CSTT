@@ -8,8 +8,8 @@ namespace BTL_CSTT
 {
    public  class XS_Decode
     {
-        public static float[] XS;//xac suat
+        public static double[] XS;//xac suat
         public static char[] LT;// lop tin
-        public static float[] PC;//XS cong don
+        public static double[] PC;//XS cong don
     }
 }

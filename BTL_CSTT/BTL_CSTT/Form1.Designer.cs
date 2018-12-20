@@ -31,6 +31,10 @@
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tabP1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtKT = new System.Windows.Forms.TextBox();
+            this.lblKT = new System.Windows.Forms.Label();
+            this.lblLength1 = new System.Windows.Forms.Label();
+            this.lblLength = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEncode = new System.Windows.Forms.TextBox();
@@ -54,6 +58,8 @@
             this.btnNhap = new System.Windows.Forms.Button();
             this.txtN2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblKn = new System.Windows.Forms.Label();
+            this.txtKn = new System.Windows.Forms.TextBox();
             this.tab1.SuspendLayout();
             this.tabP1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -92,22 +98,67 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Aquamarine;
+            this.panel1.Controls.Add(this.txtKn);
+            this.panel1.Controls.Add(this.lblKn);
+            this.panel1.Controls.Add(this.txtKT);
+            this.panel1.Controls.Add(this.lblKT);
+            this.panel1.Controls.Add(this.lblLength1);
+            this.panel1.Controls.Add(this.lblLength);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtEncode);
             this.panel1.Controls.Add(this.txtNguonTin);
             this.panel1.Controls.Add(this.btnEncode);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 259);
+            this.panel1.Location = new System.Drawing.Point(3, 251);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(786, 162);
+            this.panel1.Size = new System.Drawing.Size(786, 170);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtKT
+            // 
+            this.txtKT.Location = new System.Drawing.Point(232, 58);
+            this.txtKT.Name = "txtKT";
+            this.txtKT.Size = new System.Drawing.Size(100, 20);
+            this.txtKT.TabIndex = 13;
+            // 
+            // lblKT
+            // 
+            this.lblKT.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblKT.Location = new System.Drawing.Point(24, 54);
+            this.lblKT.Name = "lblKT";
+            this.lblKT.Size = new System.Drawing.Size(140, 23);
+            this.lblKT.TabIndex = 12;
+            this.lblKT.Text = "Kt";
+            this.lblKT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblKT.Click += new System.EventHandler(this.lblKT_Click);
+            // 
+            // lblLength1
+            // 
+            this.lblLength1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblLength1.Location = new System.Drawing.Point(229, 89);
+            this.lblLength1.Name = "lblLength1";
+            this.lblLength1.Size = new System.Drawing.Size(415, 23);
+            this.lblLength1.TabIndex = 11;
+            this.lblLength1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLength1.Click += new System.EventHandler(this.lblLength1_Click);
+            // 
+            // lblLength
+            // 
+            this.lblLength.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lblLength.Location = new System.Drawing.Point(21, 89);
+            this.lblLength.Name = "lblLength";
+            this.lblLength.Size = new System.Drawing.Size(143, 23);
+            this.lblLength.TabIndex = 10;
+            this.lblLength.Text = "Chiều dài nguồn tin";
+            this.lblLength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.BackColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(21, 30);
+            this.label2.Location = new System.Drawing.Point(21, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 23);
             this.label2.TabIndex = 3;
@@ -118,7 +169,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.BackColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(21, 123);
+            this.label5.Location = new System.Drawing.Point(21, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(143, 23);
             this.label5.TabIndex = 9;
@@ -128,16 +179,16 @@
             // txtEncode
             // 
             this.txtEncode.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtEncode.Enabled = false;
-            this.txtEncode.Location = new System.Drawing.Point(232, 126);
+            this.txtEncode.Location = new System.Drawing.Point(232, 134);
             this.txtEncode.Name = "txtEncode";
             this.txtEncode.Size = new System.Drawing.Size(412, 20);
             this.txtEncode.TabIndex = 8;
+            this.txtEncode.TextChanged += new System.EventHandler(this.txtEncode_TextChanged);
             // 
             // txtNguonTin
             // 
             this.txtNguonTin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtNguonTin.Location = new System.Drawing.Point(232, 35);
+            this.txtNguonTin.Location = new System.Drawing.Point(232, 20);
             this.txtNguonTin.Name = "txtNguonTin";
             this.txtNguonTin.Size = new System.Drawing.Size(412, 20);
             this.txtNguonTin.TabIndex = 4;
@@ -145,9 +196,9 @@
             // btnEncode
             // 
             this.btnEncode.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnEncode.Location = new System.Drawing.Point(348, 73);
+            this.btnEncode.Location = new System.Drawing.Point(662, 17);
             this.btnEncode.Name = "btnEncode";
-            this.btnEncode.Size = new System.Drawing.Size(128, 37);
+            this.btnEncode.Size = new System.Drawing.Size(107, 25);
             this.btnEncode.TabIndex = 5;
             this.btnEncode.Text = "Ấn để mã hóa";
             this.btnEncode.UseVisualStyleBackColor = true;
@@ -158,10 +209,11 @@
             this.pel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pel.BackColor = System.Drawing.Color.Silver;
-            this.pel.Location = new System.Drawing.Point(3, 74);
+            this.pel.Location = new System.Drawing.Point(3, 51);
             this.pel.Name = "pel";
-            this.pel.Size = new System.Drawing.Size(789, 179);
+            this.pel.Size = new System.Drawing.Size(789, 194);
             this.pel.TabIndex = 10;
+            this.pel.Paint += new System.Windows.Forms.PaintEventHandler(this.pel_Paint);
             // 
             // label4
             // 
@@ -248,7 +300,7 @@
             // btnDE
             // 
             this.btnDE.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDE.Location = new System.Drawing.Point(602, 70);
+            this.btnDE.Location = new System.Drawing.Point(551, 93);
             this.btnDE.Name = "btnDE";
             this.btnDE.Size = new System.Drawing.Size(87, 23);
             this.btnDE.TabIndex = 9;
@@ -347,6 +399,24 @@
             this.label3.Text = "Nhập số lớp tin của nguồn tin";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblKn
+            // 
+            this.lblKn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblKn.Location = new System.Drawing.Point(389, 58);
+            this.lblKn.Name = "lblKn";
+            this.lblKn.Size = new System.Drawing.Size(108, 20);
+            this.lblKn.TabIndex = 14;
+            this.lblKn.Text = "Kn";
+            this.lblKn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblKn.Click += new System.EventHandler(this.lblKn_Click);
+            // 
+            // txtKn
+            // 
+            this.txtKn.Location = new System.Drawing.Point(544, 57);
+            this.txtKn.Name = "txtKn";
+            this.txtKn.Size = new System.Drawing.Size(100, 20);
+            this.txtKn.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,6 +468,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblLength1;
+        private System.Windows.Forms.Label lblLength;
+        private System.Windows.Forms.TextBox txtKT;
+        private System.Windows.Forms.Label lblKT;
+        private System.Windows.Forms.Label lblKn;
+        private System.Windows.Forms.TextBox txtKn;
     }
 }
 

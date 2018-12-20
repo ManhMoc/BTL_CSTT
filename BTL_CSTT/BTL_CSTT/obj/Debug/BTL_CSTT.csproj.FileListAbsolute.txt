@@ -8,3 +8,13 @@ C:\Users\Dell\source\repos\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.csproj.GenerateR
 C:\Users\Dell\source\repos\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.exe
 C:\Users\Dell\source\repos\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.pdb
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\bin\Debug\BTL_CSTT.exe.config
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\bin\Debug\BTL_CSTT.exe
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\bin\Debug\BTL_CSTT.pdb
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.csprojAssemblyReference.cache
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.Form1.resources
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.Properties.Resources.resources
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.csproj.GenerateResource.cache
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.csproj.CoreCompileInputs.cache
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.exe
+G:\Github\BTL_CSTT\BTL_CSTT\BTL_CSTT\obj\Debug\BTL_CSTT.pdb

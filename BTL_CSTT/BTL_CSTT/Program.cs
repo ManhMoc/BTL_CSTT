@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace BTL_CSTT
 {
+    
     static class Program
     {
         /// <summary>
@@ -16,7 +17,9 @@ namespace BTL_CSTT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
             Application.Run(new Form1());
+            
         }
     }
 }
